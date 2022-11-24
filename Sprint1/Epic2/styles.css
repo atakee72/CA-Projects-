@@ -1,0 +1,149 @@
+body {
+    background-color: lightsalmon;
+    font-size: 25px;
+    line-height: 1.5;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.gridContainer {
+    display: grid;
+    grid-template-rows: 3fr 1.5fr 11fr 1fr;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+    gap: 30px;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#divLogo {
+position: fixed;
+left: 1,5%;
+top: 5%;
+z-index: 5;
+}
+
+.divNav {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: lightsalmon;
+    width: 100%;
+    text-shadow: 3px 3px salmon;
+}
+
+header {
+    padding: 50px;
+    margin: 50px;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
+#mainPart1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#mainPart2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around
+}
+
+footer {
+    padding: 30px 200px 30px 20px;
+    border: 20px solid white;
+    font-size: 0,5em;
+}
+
+button {
+    font-size: xx-large;
+    border-radius: 30px;
+    display: block;
+    margin: auto;
+    width:30%;
+}
+
+img {
+    filter: grayscale(50%);
+    border-radius: 140px 0; 
+}
+
+label {
+    font-style: oblique;
+}
+
+input {
+    font-size: 1.5rem;
+}
+
+fieldset {
+    display: flex;
+    justify-content: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+    padding: 10px;
+}
+
+div table tr:hover {
+    background-color: white;
+    color: black;
+    }
+
+#gmap_canvas {
+    border: 2px dashed;
+}
+    
+.select {
+    text-align: center;
+}
+
