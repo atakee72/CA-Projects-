@@ -11,5 +11,5 @@ function listTheBands(arr){
     }
 }
 
-let theBands = ['Dire Straits', 'Kansas', 'Steely Dan', 'sdfasdf', 'sdfsadfsdfasd'];
+let theBands = ['Dire Straits', 'Kansas', 'Steely Dan', 'sdfasdf', 'sdfsadfsdfasd', 'rtrtuerytur'];
 listTheBands(theBands);

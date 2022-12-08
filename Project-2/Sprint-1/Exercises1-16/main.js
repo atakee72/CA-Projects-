@@ -197,7 +197,7 @@ function splitNReverse(str){
 
    // second part: reverse this array and append its elements (letters) one by one to form a new string:
 
-   resultStr = "";
+   let resultStr = "";
     for (i = (makeArr.length - 1); i >=0; i--){
         resultStr = resultStr + makeArr[i];
     }
@@ -223,15 +223,15 @@ function makeUppercase(str){
 
         makeArr[i] = makeArr[i][0].toUpperCase() + makeArr[i].substr(1); 
     }
-    console.log(makeArr);
-    console.log(typeof makeArr);
+   // console.log(makeArr);
+    //console.log(typeof makeArr);
 
      for (i = 0; i < makeArr.length; i++){
         result += " " + makeArr[i];
      }
 
     console.log(result);
-    console.log(typeof result);
+   // console.log(typeof result);
 }
 
 var mySentence = "manipulate the document structure is one of the most common things you'll want to do when writing web pages and apps.";
