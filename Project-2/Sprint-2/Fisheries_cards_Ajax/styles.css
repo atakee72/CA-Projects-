@@ -1,0 +1,50 @@
+div.cards-container {
+    min-height: 100px;
+    max-height: 150px;    
+}
+
+.baskabaska {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    padding-bottom: 30px;
+}
+
+div.card{
+    background-color: lightskyblue;
+    max-height: 50%;
+}
+
+#sidebar {
+    /* height: 100%; */
+    width: 160px;
+    position: fixed;
+    top: 285px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.baska {
+    display: block;
+    padding-left: 250px;
+    padding-top: 250px;
+}
+
+button {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    margin: 20px 5px 10px 5px;
+}
+
+div.toggleT {
+    margin: 15px;
+}

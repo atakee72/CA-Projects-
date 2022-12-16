@@ -62,10 +62,6 @@ for (let i = 0; i < fish_species.length; i++) {
 
     function clickButton() {
         isTextHidden = !isTextHidden;
-        showText();
-    }
-
-    function showText() {
         if (isTextHidden === false) {
             button.innerText = ("Hide");
             toggleText.setAttribute("class", "h-50 mw-auto")
@@ -84,5 +80,25 @@ for (let i = 0; i < fish_species.length; i++) {
             benefits.innerHTML = "";
         }
     }
+
+    // function showText() {
+    //     if (isTextHidden === false) {
+    //         button.innerText = ("Hide");
+    //         toggleText.setAttribute("class", "h-50 mw-auto")
+    //         toggleText.setAttribute("style", "overflow-y: scroll");
+    //         biology.innerHTML = "<span>Biology: </span>" + fish_species[i].Biology;
+    //         location.innerHTML = "<span>Location: </span>" + fish_species[i].Location;
+    //         physical.innerHTML = "<span>Physical Description: </span>" + fish_species[i]["Physical Description"];
+    //         texture.innerHTML = "<span>Texture: </span>" + fish_species[i].Texture;
+    //         benefits.innerHTML = fish_species[i]["Health Benefits"];
+    //     } else {
+    //         button.innerText = ("Show");
+    //         biology.innerHTML = "";
+    //         location.innerHTML = "";
+    //         physical.innerHTML = "";
+    //         texture.innerHTML = "";
+    //         benefits.innerHTML = "";
+    //     }
+    // }
 
 }
