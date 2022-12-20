@@ -4,29 +4,32 @@ const getData = () => {
             console.log(response);
             return response.json();
         })
-        .then((result) => {
-            console.log("result", result); 
-            const fish_species = result;
-            console.log(fish_species[0]);
+        .then((jsonFile) => {
+            console.log("result", jsonFile); 
+            const fish_species = jsonFile;
+            // console.log(fish_species[0]);
 
             controller(fish_species);
-
+            addEvents();
+        })
+        .catch((error) => {
+            alert(error);
         });
 };
 
 const createCards = (fish_species) => {
     
     const cardsContainer = document.getElementById("cards-container");
-    cardsContainer.innerHTML = "";
+     cardsContainer.innerHTML = "";
     let isTextHidden = true;
 
 
      for (let i = 0; i < fish_species.length; i++) {
         const theCard = document.createElement("div");
-        theCard.setAttribute("class", "card ms-1 mt-3 col-sm-1 col-md-2 col-lg-3 border-light rounded-3 border border-3 shadow-lg p-3 mb-5 rounded");
+        theCard.setAttribute("class", "card ms-1 col-sm-1 col-md-2 col-lg-4 border-light rounded-3 border border-3 p-3 mb-5 rounded");
     
         const cardImg = document.createElement("img");
-        cardImg.setAttribute("class", "card-img-top w-auto img-fluid")
+        cardImg.setAttribute("class", "card-img-top img-fluid")
         cardImg.setAttribute("src", fish_species[i]["Species Illustration Photo"].src);
      
         const cardBody = document.createElement("div");
@@ -40,28 +43,25 @@ const createCards = (fish_species) => {
         p_title.setAttribute("class", "text-center pt-4 top");
         p_title.innerText = "(" + fish_species[i]["Scientific Name"] + ")";
     
-        const button = document.createElement("button");
-        button.innerText = ("Show");
-        button.setAttribute("class", "bg-light m-3 btn btn-sm btn-info");
-        button.addEventListener("click", clickButton);
-
-        function clickButton() {
+        theCard.addEventListener("click", clickCard);
+        
+        function clickCard() {
             isTextHidden = !isTextHidden;
             showText();
         }
 
         function showText() {
             if (isTextHidden === false) {
-                button.innerText = ("Hide");
+                // button.innerText = ("Hide");
                 toggleText.setAttribute("class", "mw-auto")
-                toggleText.setAttribute("style", "overflow-y: scroll");
-                biology.innerHTML = "<span>Biology: </span>" + fish_species[i].Biology;
-                location.innerHTML = "<span>Location: </span>" + fish_species[i].Location;
-                physical.innerHTML = "<span>Physical Description: </span>" + fish_species[i]["Physical Description"];
-                texture.innerHTML = "<span>Texture: </span>" + fish_species[i].Texture;
+                // toggleText.setAttribute("style", "overflow-y: scroll");
+                biology.innerHTML = "<em>Biology: </em>" + fish_species[i].Biology;
+                location.innerHTML = "<em>Location: </em>" + fish_species[i].Location;
+                physical.innerHTML = "<em>Physical Description: </em>" + fish_species[i]["Physical Description"];
+                texture.innerHTML = "<em>Texture: </em>" + fish_species[i].Texture;
                 benefits.innerHTML = fish_species[i]["Health Benefits"];
             } else {
-                button.innerText = ("Show");
+                // button.innerText = ("Show");
                 biology.innerHTML = "";
                 location.innerHTML = "";
                 physical.innerHTML = "";
@@ -69,7 +69,7 @@ const createCards = (fish_species) => {
                 benefits.innerHTML = "";
             }
         }
-    
+        
         const toggleText = document.createElement("div");
         toggleText.setAttribute("class", "toggleT");
       
@@ -94,7 +94,6 @@ const createCards = (fish_species) => {
         theCard.appendChild(cardBody);  
         cardBody.appendChild(h5_title);
         cardBody.appendChild(p_title);
-        cardBody.appendChild(button);
         cardBody.appendChild(toggleText);
         toggleText.appendChild(location);
         toggleText.appendChild(physical);
@@ -102,6 +101,7 @@ const createCards = (fish_species) => {
         toggleText.appendChild(texture);
         toggleText.appendChild(benefits);   
     }
+    
 }
 
 const createDropdown = (fish_species) => {
@@ -127,7 +127,7 @@ function controller(fish_species) {
     createCards(fish_species);
     createDropdown(fish_species);
     setEventListeners(fish_species);
-
+    addEvents(fish_species);
 }
 const setEventListeners = (fish_species) => {
     const dropSelector = document.querySelector("#dropdown");
@@ -142,8 +142,49 @@ const filterByDropdown = (fish_species) => {
     const filteredByRegion = fish_species.filter((eachSpecies) => {
         return eachSpecies["NOAA Fisheries Region"] === dropdownValue || dropdownValue === "all";
     });
+    
     createCards(filteredByRegion);
+    addEvents(filteredByRegion);
+}
 
+
+const addEvents = (fish_species) => {
+    const searchBar = document.getElementById("fish_search");
+    searchBar.addEventListener("input", (event) => {
+        fishArt = event.target.value;
+        console.log(fishArt);
+        console.log(event);
+
+        // const resultBox = document.querySelector(".resultBox");
+        // const resultList = resultBox.querySelector(".resultList");
+        // let generateSuggestions = fish_species.filter((eachSpecies) => {
+        //     return eachSpecies["Species Name"].toLowerCase().includes(fishArt.toLowerCase());
+        //     });
+        // const createSuggList = generateSuggestions.forEach((eachSuggestion) => {
+        //     const listItem = document.createElement("li");
+        //     resultList.appendChild(listItem);
+        //     listItem.innerHTML = generateSuggestions;
+        // });
+
+
+            searchBar.addEventListener("keyup", (event) => {
+            // console.log(event);
+                if (event.key === "Enter") {
+                    const filteredByName = fish_species.filter((eachSpecies) => {
+                    return eachSpecies["Species Name"].toLowerCase().includes(fishArt.toLowerCase());
+                    });  
+                    createCards(filteredByName);        
+                }
+            });
+    });
 }
 
 getData();
+
+// const clickedTheCardContainer = () => {
+//     const theCardContainer = document.querySelector(".cards-container");
+//     const togglyText = document.querySelector(".toggleT");
+//     theCardContainer.addEventListener("click", () =>{
+//     togglyText.style.display = "none";
+//     });
+// };
