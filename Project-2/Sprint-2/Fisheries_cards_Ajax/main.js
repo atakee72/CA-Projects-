@@ -163,7 +163,7 @@ const addEvents = (fish_species) => {
         // const createSuggList = generateSuggestions.forEach((eachSuggestion) => {
         //     const listItem = document.createElement("li");
         //     resultList.appendChild(listItem);
-        //     listItem.innerHTML = generateSuggestions;
+        //     listItem.innerHTML = eachSuggestion["Species Name"];
         // });
 
 

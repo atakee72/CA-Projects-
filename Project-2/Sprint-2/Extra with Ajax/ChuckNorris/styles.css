@@ -1,0 +1,109 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.grid-container {
+    background-color: yellowgreen;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 2fr, 5fr, 1fr;
+    grid-template-columns: repeat(5, auto);
+    grid-template-areas: 
+    "header header header header header"
+    "aside-1 main main main aside-2"
+    "footer footer footer footer footer";   
+    grid-gap: 5px;
+}
+
+.header {
+    color: yellow;
+    grid-area: header;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    left: 1px;
+    top: 300px;   
+    transform: rotate(-45deg); 
+}
+
+.main {
+    grid-area: main;
+}
+
+aside {
+    background-color: purple;
+    min-width: 300px;
+}
+
+.aside-1 {
+    grid-area: aside-1;
+}
+
+.aside-2 {
+    grid-area: aside-2;
+}
+
+footer {
+    grid-area: footer;
+}
+
+li {
+    border: 1px dashed white
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: palevioletred;
+    max-height: 600px;
+    min-height: 100%;
+    overflow-y: scroll;
+}
+
+#orta {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: palevioletred;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: purple;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: pink;
+  }
+
+  #chuck {
+    vertical-align: middle;
+    width: 100px;
+    height: 50px;
+  }
+
+  #chuck-container {
+    position: absolute;
+    right: 50px;
+    bottom: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
