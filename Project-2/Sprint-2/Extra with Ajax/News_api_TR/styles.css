@@ -1,0 +1,38 @@
+body {
+    background-color: yellowgreen;
+    color: black;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.header {
+    color: yellow;
+    text-align: center;
+}
+
+.card {
+    display: inline-block
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card:hover {
+	transform: scale(1.1);
+    z-index: 1;
+}
+
+.card-Body {
+    text-align: left;
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 0px;
+    padding: 5px;
+    color: black;
+    background-color: yellow;
+    /* border: 1px solid white; */
+}
