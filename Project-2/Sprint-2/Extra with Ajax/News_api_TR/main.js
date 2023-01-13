@@ -1,5 +1,31 @@
 const getData = () => {
-    fetch("https://newsapi.org/v2/top-headlines?country=tr&apiKey=98134c946b3d44b3a0b42f72200197b6")
+    let query = "";
+    const apiKey = "98134c946b3d44b3a0b42f72200197b6";
+    // let url = `https://newsapi.org/v2/top-headlines?country=tr&q=${query}&apiKey=${apiKey}`;
+
+    const handleEvents = () => {
+        const searchBar = document.getElementById("newsQuery");
+        searchBar.addEventListener("input", (event) => {
+            query = event.target.value;
+            console.log(query);
+
+            console.log(event);
+    
+            searchBar.addEventListener("keyup", (event) => {
+                 console.log(event);
+                    if (event.key === "Enter") {
+                        return query;
+                    }
+                });
+        });
+    }
+
+    handleEvents();
+
+    let url = `https://newsapi.org/v2/top-headlines?country=tr&q=${query}&apiKey=${apiKey}`;
+
+    fetch(url)
+
         .then((response) => {
             console.log(response);
             return response.json();
@@ -65,8 +91,6 @@ function createCard(articles) {
         cardBody.appendChild(cardText);
         buttonLink.appendChild(linkButton);
         card.appendChild(buttonLink);
-
-        
     }
 }
 

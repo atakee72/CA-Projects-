@@ -155,21 +155,9 @@ const addEvents = (fish_species) => {
         console.log(fishArt);
         console.log(event);
 
-        // const resultBox = document.querySelector(".resultBox");
-        // const resultList = resultBox.querySelector(".resultList");
-        // let generateSuggestions = fish_species.filter((eachSpecies) => {
-        //     return eachSpecies["Species Name"].toLowerCase().includes(fishArt.toLowerCase());
-        //     });
-        // const createSuggList = generateSuggestions.forEach((eachSuggestion) => {
-        //     const listItem = document.createElement("li");
-        //     resultList.appendChild(listItem);
-        //     listItem.innerHTML = eachSuggestion["Species Name"];
-        // });
-
-
             searchBar.addEventListener("keyup", (event) => {
             // console.log(event);
-                if (event.key === "Enter") {
+                if (event.key === "Enter") { 
                     const filteredByName = fish_species.filter((eachSpecies) => {
                     return eachSpecies["Species Name"].toLowerCase().includes(fishArt.toLowerCase());
                     });  
@@ -180,11 +168,3 @@ const addEvents = (fish_species) => {
 }
 
 getData();
-
-// const clickedTheCardContainer = () => {
-//     const theCardContainer = document.querySelector(".cards-container");
-//     const togglyText = document.querySelector(".toggleT");
-//     theCardContainer.addEventListener("click", () =>{
-//     togglyText.style.display = "none";
-//     });
-// };
