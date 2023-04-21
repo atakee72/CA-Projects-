@@ -1,7 +1,6 @@
 body {
-    background-color: lightsalmon;
+    background-color: lightsteelblue;
     font-size: 25px;
-    line-height: 1.5;
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
@@ -9,13 +8,13 @@ body {
 
 .gridContainer {
     display: grid;
-    grid-template-rows: 3fr 1.5fr 11fr 1fr;
+    grid-template-rows: 0.2fr 1fr 7fr 1fr;
     grid-template-areas: 
     "header"
     "nav"
     "main"
     "footer";
-    gap: 30px;
+    gap: 5px;
 }
 
 header {
@@ -35,9 +34,6 @@ footer {
 }
 
 #divLogo {
-position: fixed;
-left: 1,5%;
-top: 5%;
 z-index: 5;
 }
 
@@ -49,14 +45,14 @@ z-index: 5;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: lightsalmon;
+    background-color: gray;
     width: 100%;
-    text-shadow: 3px 3px salmon;
+    text-shadow: 3px 3px lightseagreen;
 }
 
 header {
-    padding: 50px;
-    margin: 50px;
+    padding: 25px;
+    margin: 25px;
 }
 
 nav li a {
@@ -65,7 +61,7 @@ nav li a {
     text-align: center;
     padding: 15px 20px;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 nav li a:hover {
@@ -122,7 +118,7 @@ fieldset {
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 0.5px solid lightgray;
     border-collapse: collapse;
     margin: auto;
 }
