@@ -33,7 +33,7 @@
                     <ul style="font-weight: bold;">
                         <div class="divNav">
                             <li><a href="./home.html">Home</a></li>
-                            <li><p style="text-decoration: underline;">Reservations</p></li>
+                            <li><p style="text-decoration: underline; color: white; margin: 0; padding: 0;">Reservations</p></li>
                             <li><a href="./special.html"> Special</a></li>
                             <li><a href="./contact.html"> Contact</a></li>
                         </div>
@@ -45,7 +45,7 @@
 
                 <section>
         
-                    <p style="column-count: 4; text-align: justify; border: 0.5px solid lightgray; padding: 1%; margin: 0 3% 0 3%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugiat magnam sint recusa ndae explicabo asperiores tenetur nulla autem quis, eligendi vel consectetur sed iure deserunt architecto aspernatur delectus distinctio dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae asperiores, ad exercit ationem ratione delectus laudantium, facilis quibusdam, eos esse libero adipisci debitis architecto non doloremque enim fugiat quam laborum veritatis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint tempora suscipit quia officiis fugiat, modi officia doloremque, ipsum facere debitis cumque iusto. Suscipit animi quae est numquam enim dicta blanditiis. Suscipit animi quae est numquam enim dicta blanditiis. Suscipit animi quae est numquam enim dicta blanditiis.</p>
+                    <p style="column-count: 4; text-align: justify; border: 0.5px solid lightgray; padding: 1%; margin: 0 3% 0 3%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugiat magnam sint recusa ndae explicabo asperiores tenetur nulla autem quis, eligendi vel consectetur sed iure deserunt architecto aspernatur delectus distinctio dolorem. Lorem ipsum dolopit quia officiis fugiat, modi officia doloremque, ipsum facere debitis cumque iusto. Suscipit animi quae est numquam enim dicta blanditiis. Suscipit animi quae est numquam enim dicta blanditiis. Suscipit animi quae est numquam enim dicta blanditiis.</p>
         
                 </section>
 
@@ -53,7 +53,7 @@
         
                 <section>
         
-                    <p style="column-count: 1; text-align: justify; border: 0.5px solid lightgray; padding: 1%; margin: 0 3% 0 3%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugiat magnam sint recusandae explicabo asperiores tenetur nulla autem quis, eligendi vel consectetur sed iure deserunt architecto aspernatur delectus distinctio dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae asperiores, ad exercitationem ratione delectus laudantium, facilis quibusdam, eos esse libero adipisci debitis architecto non doloremque enim fugiat quam laborum veritatis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint tempora suscipit quia officiis fugiat, modi officia doloremque, ipsum facere debitis cumque iusto. Suscipit animi quae est numquam enim dicta blanditiis. Suscipit animi quae est numquam enim dicta blanditiis. Suscipit animi quae est numquam enim dicta blanditiis.</p>
+                    <p style="column-count: 1; text-align: justify; border: 0.5px solid lightgray; padding: 1%; margin: 0 3% 0 3%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugiat magnam sint recusandae explicabo asperiores tenetur nulla autem quis, eligendi vel consectepora suscipit quia officiis fugiat, modi officia doloremque, ipsum facere debitis cumque iusto. Suscipit animi quae est numquam enim dicta blanditiis. Suscipit animi quae est numquam enim dicta blanditiis. Suscipit animi quae est numquam enim dicta blanditiis.</p>
         
                 </section>
 
@@ -67,7 +67,7 @@
 
                     <div style="padding: 30px;">
                     
-                        <form action="confirmation-page.html" method="post" autocomplete="on" target="_self" style="text-align: center;">
+                        <form action="confirmation-page.html" method="get" autocomplete="on" target="_self" style="text-align: center;">
 
                             <fieldset style="padding: 1%; margin: 0 1% 0 1%; border: 0.5px solid lightgray;">
                                 <legend>Reservation form</legend>
@@ -89,10 +89,10 @@
     
                                     <p><h4>Sex</h4></p>
 
-                                    <input id="radio1" type="radio" name="sex" required> 
+                                    <input id="radio1" type="radio" name="sex" value="Female" required> 
                                     <label for="radio1">Female</label>
                                     <br> <br>
-                                    <input id="radio2" type="radio" name="sex" checked> 
+                                    <input id="radio2" type="radio" name="sex" value="Male" checked> 
                                     <label for="radio2">Male</label><br> <br>
                                 </div>
                             
@@ -101,11 +101,11 @@
                         
                                     <select name="travellerType" id="travellerType" size="5" multiple>
                                         <option value="t0" selected><i>Please select ... (</i></option>
-                                        <option value="t1">am a frequent traveller</option>
-                                        <option value="t2">am an occasional traveller</option>
-                                        <option value="t3">would like to travel sometimes</option>
-                                        <option value="t4">am a house bird</option>
-                                        <option value="t5">hate travelling</option>
+                                        <option value="Frequent traveller">am a frequent traveller</option>
+                                        <option value="Occasional traveller">am an occasional traveller</option>
+                                        <option value="Rare traveller">would like to travel sometimes</option>
+                                        <option value="Not a keen traveller">am a house bird</option>
+                                        <option value="Hates travelling">do not like travelling</option>
                                     </select><br>
                                     <i>Ctrl+click to place multiple selections</i>
         
@@ -115,11 +115,12 @@
 
                                     <textarea style="display: inline-block; " name="textArea" id="textArea" cols="65" rows="12" placeholder="Click and start writing ..."></textarea>
                                     <br>
-                                    <input id="checkbox1" type="checkbox" name="treatment" checked> 
+                                    <input id="checkbox" type="checkbox" name="treatment" value="Does not want any special treatment" checked> 
                                     <label for="checkbox1">I do <strong>NOT</strong> want any special treatment</label>
                                     <br><br><br>
 
-                                    <input type="submit" value="Submit the form ">
+                                    <input type="submit" value="Submit the form" style="color: white; text-decoration: none; background-color: gray; width:50%; height: 100px; border: 10px solid white; border-radius: 20px; box-shadow: 10px 10px gray;">
+
                                 </div>
 
                             </fieldset>

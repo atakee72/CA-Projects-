@@ -44,10 +44,9 @@ z-index: 5;
     align-items: center;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: gray;
     width: 100%;
-    text-shadow: 3px 3px lightseagreen;
+    text-shadow: 1px 1px lightgray;
 }
 
 header {
