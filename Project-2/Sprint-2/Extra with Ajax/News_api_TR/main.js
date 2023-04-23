@@ -43,6 +43,7 @@ const getData = () => {
     });
 };
 
+
 function createCard(articles) {
     const cardDeck = document.getElementById("card-deck");
 

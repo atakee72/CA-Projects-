@@ -5,7 +5,10 @@ let isTextHidden = true;
 
 for (let i = 0; i < fish_species.length; i++) {
     const theCard = document.createElement("div");
-    theCard.setAttribute("class", "card 3mt-1 ms-1 mt-1 text-black col-sm-1 col-md-2 col-lg-3 bg-light border-blue");
+    theCard.setAttribute(
+      "class",
+      "card mt-1 ms-1 text-black col-xs-5 col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 bg-light h-100vh"
+    );
 
     const cardImg = document.createElement("img");
     cardImg.setAttribute("class", "card-img-top p-3 w-auto img-fluid mx-auto")

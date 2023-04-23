@@ -26,7 +26,10 @@ const createCards = (fish_species) => {
 
      for (let i = 0; i < fish_species.length; i++) {
         const theCard = document.createElement("div");
-        theCard.setAttribute("class", "card ms-1 col-sm-1 col-md-2 col-lg-4 border-light rounded-3 border border-3 p-3 mb-5 rounded");
+        theCard.setAttribute(
+          "class",
+          "card ms-1 col-xs-5 col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3 border-light rounded-3 border border-3 p-2 mb-5 rounded"
+        );
     
         const cardImg = document.createElement("img");
         cardImg.setAttribute("class", "card-img-top img-fluid")
