@@ -35,9 +35,15 @@
         let buttonElement = document.querySelector("button");
         let inputElement = document.querySelector("input");
 
+        buttonElement.addEventListener("click", add2List);
+
         function add2List(){
-            var inputValue = document.input.value = " ";
-            document.
+            const newInputItem = inputElement.value;
+            const liElement = document.createElement("li");
+            liElement.innerText = newInputItem;
+            ulElement.appendChild(liElement);
+            inputElement.value = "";
+            
         }
 
     </script>
